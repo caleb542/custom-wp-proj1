@@ -1,0 +1,8 @@
+
+.vscode
+uploads
+node_modules
+upgrade-temp-backup
+/index.php
+/themes/index.php
+/plugins/index.php

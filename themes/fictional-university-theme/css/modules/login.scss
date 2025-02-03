@@ -1,0 +1,51 @@
+/* Customize Login Screen */
+
+body.login .button-primary {
+  background-color: $darkOrange;
+  border-color: scale-color($darkOrange, $lightness: -10%);
+  text-shadow: 0 -1px 1px scale-color($darkOrange, $lightness: -15%), 1px 0 1px scale-color($darkOrange, $lightness: -15%), 0 1px 1px scale-color($darkOrange, $lightness: -15%), -1px 0 1px scale-color($darkOrange, $lightness: -15%);
+  box-shadow: 0 1px 0 scale-color($darkOrange, $lightness: -20%);
+}
+
+body.login .button-primary:active,
+body.login .button-primary:focus,
+body.login .button-primary:hover {
+  background-color: scale-color($darkOrange, $lightness: -9%);
+  border-color: $darkOrange;
+  text-shadow: 0 -1px 1px scale-color($darkOrange, $lightness: -20%), 1px 0 1px scale-color($darkOrange, $lightness: -20%), 0 1px 1px scale-color($darkOrange, $lightness: -20%), -1px 0 1px scale-color($darkOrange, $lightness: -20%);
+  box-shadow: 0 1px 0 scale-color($darkOrange, $lightness: -25%);
+}
+
+body.login {
+  background-color: $beige;
+  background:url(http://customwp.local/wp-content/uploads/2025/01/caitlyn-chau-LIO6MrWIB70-unsplash-1-1.jpg) repeat 0 0;
+}
+
+.login h1 a {
+  color: $mainBlue;
+  font-size: 30px;
+  font-weight: 300;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+}
+
+.login .message, .login .notice  {
+  display:block;
+  height: 200px;
+  background-color: rgba(255,255,255,0.5);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 73% 55%, 75% 100%, 55% 55%, 0 55%);
+  border:none;
+  font-size: 1.25rem;
+  margin:auto;
+
+}
+form#loginform {
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+#login #nav a, p #backtoblog{
+  color:red;
+}

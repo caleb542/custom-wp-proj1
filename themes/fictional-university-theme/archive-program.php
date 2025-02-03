@@ -1,0 +1,49 @@
+<?php 
+get_header()
+?>
+
+<?php
+pageBanner( array(
+    'title'=> 'All Programs',
+    'subtitle'=> 'There is something for everyone. Have a look around.',
+));
+?>
+<div class="container container--narrow page-section">
+
+    <?php
+     $today = date('Ymd');
+    //  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+     $programs =  new WP_Query(array(
+          'post_type' => 'program',
+          'posts_per_page' => -1,
+          'paged' => get_query_var( 'paged', 1 ),
+          //'meta_key' => 'event-date-selector',
+          'orderby' => 'title',
+          'order' => 'ASC',
+          
+     ));
+     ?>
+<ul class="link-list min-list"> 
+<?php
+    while($programs->have_posts()) {
+      $programs->the_post();?>
+
+        <li><a href="<?php the_permalink()?>"><?php the_title()?></a></li>
+
+        <?php  
+      
+        };
+        echo paginate_links(array(
+            'total' => $programs->max_num_pages
+          ));
+        wp_reset_postdata();
+
+   
+    ?>
+    <!-- <hr class="section-break">
+    <p>Looking for a recap of past events? <a href="<?php echo site_url('/past-events')?>">Check out our Past Events archive</a>.</p> -->
+    </div>
+
+<?php
+get_footer() 
+?>
