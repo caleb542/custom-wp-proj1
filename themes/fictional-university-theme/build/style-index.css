@@ -1648,4 +1648,25 @@ body.admin-bar .search-overlay {
   margin-bottom: 0;
 }
 
+div.word-count-container {
+  background-color: #333;
+  background-color: #FAF0CA;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 20px;
+  color: #fff;
+  color: rgb(166.6064655172, 143.5412715517, 55.8935344828);
+  margin-bottom: 20px;
+}
+div.word-count-container h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+div.word-count-container p {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  margin-trim: bottom;
+}
+
 /*# sourceMappingURL=style-index.css.map*/

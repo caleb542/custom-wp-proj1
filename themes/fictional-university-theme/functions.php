@@ -1,4 +1,12 @@
 <?php
+
+function add_cors_headers() {
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+}
+add_action('init', 'add_cors_headers');
+
 require get_theme_file_path('/inc/like-route.php');
 require get_theme_file_path('/inc/search-route.php');
 
@@ -88,6 +96,8 @@ function university_features() {
     add_image_size( 'professorLandscape', 400, 260, true );
     add_image_size( 'professorPortrait', 480, 650, true );
     add_image_size( 'pageBanner', 1500, 350, true );
+    add_image_size( 'smallSquare', 60, 60, true );
+    add_image_size( 'tinySquare', 30, 30, true );
 
 };
 
